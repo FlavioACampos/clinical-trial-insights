@@ -21,7 +21,7 @@ A web application for browsing, saving, and receiving updates on clinical trials
 ### 1️⃣ Clone the repository
 
 ```sh
-git clone https://github.com/YOUR-USERNAME/clinical-trial-insights.git
+git clone https://github.com/FlavioACampos/clinical-trial-insights.git
 cd clinical-trial-insights
 ```
 
