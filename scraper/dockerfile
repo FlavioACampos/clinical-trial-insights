@@ -1,0 +1,14 @@
+# Use a slim Python image
+FROM python:3.12-slim
+
+# Set the working directory
+WORKDIR /scraper
+
+# Copy the local scraper directory to the container's /scraper directory
+COPY scraper/ /scraper/
+
+# Install the dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Set the default command to run the Scrapy spider
+CMD ["scrapy", "crawl", "clinical_trial_spider"]
