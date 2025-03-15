@@ -1,6 +1,8 @@
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: app/dockerfile
     container_name: cti-app
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     volumes:
@@ -23,6 +25,14 @@ services:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+
+  scraper:
+    container_name: cti-scraper
+    build:
+      context: .
+      dockerfile: scraper/dockerfile
+    depends_on:
+      - db
 
 volumes:
   postgres_data:
