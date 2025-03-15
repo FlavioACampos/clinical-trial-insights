@@ -46,16 +46,3 @@ docker-compose up --build
 ### 4️⃣ Access the API
 
 Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive API documentation.
-
-## 📌 Project Structure
-
-```
-/app
-  ├── main.py          # FastAPI entry point
-/models
-  ├── database.py      # Database setup
-  ├── models.py        # Database models
-/docker
-  ├── dockerfile
-  ├── docker-compose.yml
-```
